@@ -49,7 +49,7 @@ If you have *git* access:
      # as ssh
      git clone git://github.com/mrrena/perldiver
 
-PerlDiver is installed simply by unzipping and uploading all files in the [distribution zip][10] into your cgi-bin directory. If you don't know where your cgi-bin directory is, please ask your system administrator. Be sure to upload all files in ASCII format.
+Otherwise, PerlDiver is installed simply by unzipping and uploading all files in the [distribution zip][10] into your cgi-bin directory. If you don't know where your cgi-bin directory is, please ask your system administrator. Be sure to upload all files in ASCII format.
 
 After the files are uploaded, *perldiver.pl* needs to have execute permissions turned on. You can do this by running the command *chmod +x perldiver.pl* from your command line. If you don't have command line access to your web server, then there will probably be an equivalent function in your file transfer program (FTP).
 
