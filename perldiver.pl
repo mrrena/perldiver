@@ -679,6 +679,9 @@ sub help_extend{
                 'zip file'),
                  ' (updated 2012).</b><br /><br />'
             ),
+        ),
+        Tr(
+
             td(
                 pod2html(
                     "--infile=$vars->{'script_name'}",
