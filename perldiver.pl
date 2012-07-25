@@ -83,8 +83,7 @@ sub environ_vars {
         map {
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
                 td( { -width => '35%', -class => 'label' }, $_ ),
-                td( { -width => '65%', -class => 'value' },
-                    '<tt>' . $ENV{ $_ } . '</tt>' )
+                td( { -width => '65%', -class => 'value' }, $ENV{ $_ } )
             )
         } sort keys %ENV
     )
@@ -100,28 +99,22 @@ sub default_vals {
     my ( $c1, $c2 ) = ( 1, 1 );  # color incrementors
 
     Tr( { -class=> 'hl' },
-        th( { -class => 'label', -width => '30%', -align => 'right' },
+        th( { -class => 'r label', -width => '30%' },
             'DESCRIPTION'
         ),
         th( { -class => 'label', -width => '15%' },
             'VARIABLE'
         ),
-        th( { -class => 'label', -width => '55%', -align => 'left' },
+        th( { -class => 'l label', -width => '55%' },
             'RESULT'
         ),
     ) .
     join ( "\n",
         map{
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
-                th( { -valign => 'top', -align => 'right', -class => 'label' },
-                    $defaults->{ $_ }[0] # name
-                ),
-                td( { -valign => 'top', -align => 'center' },
-                    '<tt>' . $defaults->{ $_ }[1] . '</tt>' # variable
-                ),
-                td( { -valign => 'top' },
-                    '<tt>' . $defaults->{ $_ }[2] . '</tt>' # value
-                ),
+                th( { -class => 'r top label' }, $defaults->{ $_ }[0] ), # name
+                td( { -class => 'c top value' }, $defaults->{ $_ }[1] ), # variable
+                td( { -class => 'top value' }, $defaults->{ $_ }[2] ) # value
             )
         } sort { lc $a <=> lc $b } keys %$defaults
     )
@@ -155,7 +148,7 @@ sub config_full {
                         $var
                     )
                 ),
-                td( { -class => 'value' }, '<tt>' . $val . '</tt>')
+                td( { -class => 'value' }, $val )
             )
     }
 
@@ -291,12 +284,8 @@ sub main {
     join ( "\n",
         map{
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
-               td( { -class => 'label', -valign => 'top' },
-                   $main_page->{ $_ }{ 'desc' }
-               ),
-               td( { -class => 'value' },
-                   '<tt>' . $main_page->{ $_ }{ 'val' } . '</tt>'
-               )
+               td( { -class => 'top label' }, $main_page->{ $_ }{ 'desc' } ),
+               td( { -class => 'value' }, $main_page->{ $_ }{ 'val' } )
             )
         } sort { $a <=> $b } keys %$main_page
     )
@@ -425,7 +414,7 @@ sub module_detail {
     join ( "\n",
         map{
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
-                td( { -class => 'label', -valign => 'top' }, $mod_info->{ $_ }{ 'name' } ),
+                td( { -class => 'label top' }, $mod_info->{ $_ }{ 'name' } ),
                 td( { -class => 'value' }, $mod_info->{ $_ }{ 'val' } ),
             )
         } sort { $a <=> $b } keys %$mod_info
@@ -506,7 +495,7 @@ sub module_pod {
 
         map{
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
-                td( { -class => 'label', -valign => 'top' }, $mod_info->{ $_ }{ 'name' } ),
+                td( { -class => 'label top' }, $mod_info->{ $_ }{ 'name' } ),
                 td( { -class => 'value' }, $mod_info->{ $_ }{ 'val' } ),
             )
         } sort { $a <=> $b } keys %$mod_info
@@ -545,7 +534,7 @@ sub _section_header{
         ) .
         Tr(
             td(
-                { -align => 'center' },
+                { -class => 'c' },
                 $actions->{ param( 'action' ) }{ 'desc' }
             )
         )
