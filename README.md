@@ -44,10 +44,10 @@ Perl Diver source code available on GitHub @ [https://github.com/mrrena/perldive
 
 If you have *git* access:
 
-     # as https
-     git clone https://github.com/mrrena/perldiver
      # as ssh
      git clone git://github.com/mrrena/perldiver
+     # as https
+     git clone https://github.com/mrrena/perldiver
 
 Otherwise, PerlDiver is installed simply by unzipping and uploading all files in the [distribution zip][10] into your cgi-bin directory. If you don't know where your cgi-bin directory is, please ask your system administrator. Be sure to upload all files in ASCII format.
 
@@ -238,4 +238,4 @@ Copyright 1997-2003, Creative Fundamentals, Inc. ~~http://creativefundamentals.c
  [7]: http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443
  [8]: https://github.com/mrrena/perldiver
  [9]: http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html
- [10]: http://www.mrrena.com/scripts/perldiver2.33.zip
+ [10]: https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip

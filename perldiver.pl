@@ -104,7 +104,8 @@ sub environ_vars {
         map {
             Tr( { -class  => $c1++ % 3 ? ( $c2++ % 2 ? 'a1' : 'a2' ) : 'a3' },
                 td( { -width => '35%', -class => 'label' }, $_ ),
-                td( { -width => '65%', -class => 'value' }, $ENV{ $_ } )
+                td( { -width => '65%', -class => 'value' },
+                    '<tt>' . $ENV{ $_ } . '</tt>' )
             )
         } sort keys %ENV
     )
@@ -137,10 +138,10 @@ sub default_vals {
                     $defaults->{ $_ }[0] # name
                 ),
                 td( { -valign => 'top', -align => 'center' },
-                    $defaults->{ $_ }[1] # variable
+                    '<tt>' . $defaults->{ $_ }[1] . '</tt>' # variable
                 ),
                 td( { -valign => 'top' },
-                    $defaults->{ $_ }[2] # value
+                    '<tt>' . $defaults->{ $_ }[2] . '</tt>' # value
                 ),
             )
         } sort { lc $a <=> lc $b } keys %$defaults
@@ -177,7 +178,7 @@ sub config_full {
                         $var
                     )
                 ),
-                td( { -class => 'value' }, $val )
+                td( { -class => 'value' }, '<tt>' . $val . '</tt>')
             )
     }
 
@@ -224,7 +225,7 @@ sub installed_mods {
 
 
         $mods .=
-                Tr(
+                Tr( { -class => 'mono' },
                     td( { -width => '33%', -class  => 'a2' },
                         a( { -href =>
                             "$vars->{'script_name'}?action=2010&module="
@@ -582,16 +583,10 @@ sub _section_header{
 
 sub _table_output{
 
-    table( {  -bgcolor => 'black', -cellpadding => '1',
-              -width   => '100%',  -cellspacing => '0',
-              -border  => '0'
-
-        },
+    table( {  -class => 'border-black', -cellspacing => '0' },
         Tr(
             td(
-                table( { -width   => '100%',  -cellpadding => '1',
-                         -bgcolor => 'white', -cellspacing => '0',
-                    },
+                table( { -class => 'background-white', -cellspacing => '0' },
                     @_
                 )
             )
@@ -653,10 +648,13 @@ sub _page_footer{
     p() .
     _table_output(
         Tr( { -class => 'hl' },
-            th(
+            th( { -class => 'copyr' },
                 "$prog brought to you by " .
-                a( { -href => 'http://scriptsolutions.com' }, $dev ) .
-                " &copy; 1997-", ( localtime( time ) )[5] + 1900
+                strike( { -href => 'http://scriptsolutions.com' }, $dev ) .
+                ' &copy; 1997-2003. ' .
+                a( {-href => 'https://github.com/mrrena/perldiver' },
+                    ' ' . ( localtime( time ) )[5] + 1900 .
+                    ' source code' ) . '.'
             )
         )
     ) .
@@ -671,6 +669,16 @@ sub help_extend{
 
     return
         Tr(
+            td( { -class => 'c' },
+                '<br /><br /><b>Source code @ ' .
+                a({ -href => 'https://github.com/mrrena/perldiver' },
+                'https://github.com/mrrena/perldiver') .
+                ' or as a ' .
+               a({-href =>
+                'https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip' },
+                'zip file'),
+                 ' (updated 2012).</b><br /><br />'
+            ),
             td(
                 pod2html(
                     "--infile=$vars->{'script_name'}",
