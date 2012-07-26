@@ -197,17 +197,29 @@ Extending Perl Diver is easy, but not for the faint at heart. Simple follow the 
 
 PerlDiver requires the following modules to be installed.
 
-#### <a id="item-CGI"></a>CGI  Standard module included in perl distribution.
+#### <a id="item-CGI"></a>CGI
 
-#### <a id="item-File::A::AFind"></a>File::Find  Standard module included in perl distribution.
+Standard module included in perl distribution.
 
-#### <a id="item-Config"></a>Config  Module created when perl is installed.
+#### <a id="item-File::A::AFind"></a>File::Find
 
-#### <a id="item-Pod::A::AHtml2"></a>Pod::Html2  Included with PerlDiver.
+Standard module included in perl distribution.
 
-#### <a id="item-Module::A::AInfo"></a>Module::Info  Included with PerlDiver.
+#### <a id="item-Config"></a>Config 
 
-#### <a id="item-Pod2::A::AHtml"></a>Pod2::Html  A modified version of
+Module created when perl is installed.
+
+#### <a id="item-Pod::A::AHtml2"></a>Pod::Html2 
+
+Included with PerlDiver.
+
+#### <a id="item-Module::A::AInfo"></a>Module::Info
+
+Included with PerlDiver.
+
+#### <a id="item-Pod2::A::AHtml"></a>Pod2::Html
+
+A modified version of
 
 [Pod::Html][6] by Tom Christiansen. Included with PerlDiver. This should be considered extremely beta. It will not break PerlDiver, but may alter the output of the module documentation. Please report inconsistencies to ~~programmer@scriptsolutions.com~~.
 # <a id="caveats"></a>Caveats
