@@ -55,27 +55,27 @@ After the files are uploaded, *perldiver.pl* needs to have execute permissions t
 
 ## <a id="files-in-this-distribution"></a>Files in this Distribution
 
-1.  **perldiver.pl**
+#### 1. perldiver.pl
 
 The executable program.
 
-2.  **perldiver.conf**
+#### 2. perldiver.conf
 
 Configuration settings. Several sections in Perl Diver display information based on settings in this file. See [Customizing Perl Diver](#customizing-perl-diver) below for details.
 
-3.  **B/Utils.pm**
+#### 3. B/Utils.pm
 
 A Perl module required by Module::Info.
 
-4.  **B/Module/Info.pm**
+#### 4. B/Module/Info.pm
 
 A Perl module required by Module::Info.
 
-5.  **Module/Info.pm**
+#### 5. Module/Info.pm
 
 A Perl module used to provide details about a module.
 
-6.  **Pod/Html2.pm**
+#### 6. Pod/Html2.pm
 
 A modified version of Pod::Html.
 
