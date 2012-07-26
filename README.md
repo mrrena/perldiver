@@ -38,7 +38,7 @@ Perl Diver is a CGI program written in Perl that will help you find out what mod
 
 # <a id="get-the-source"></a>Get the Source
 
-Perl Diver source code available on GitHub @ [https://github.com/mrrena/perldiver][8]. Blog post with screenshot and how-tos on hiding Perl Diver from search engines using a *robots.txt* file and password protecting your perldiver directory using Apache's *htpasswd*: [Perl Diver 2.33: Download and Installation][9]
+Perl Diver source code available on GitHub @ [https://github.com/mrrena/perldiver][8]. Blog post with screenshot and how-tos on hiding Perl Diver from search engines using a *robots.txt* file and password protecting your perldiver directory using Apache's *htpasswd*: [Perl Diver 2.33: Download and Installation][9].
 
 # <a id="installation"></a>Installation
 
