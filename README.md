@@ -219,9 +219,8 @@ Included with PerlDiver.
 
 #### <a id="item-Pod2::A::AHtml"></a>Pod2::Html
 
-A modified version of
+A modified version of [Pod::Html][6] by Tom Christiansen. Included with PerlDiver. This should be considered extremely beta. It will not break PerlDiver, but may alter the output of the module documentation. Please report inconsistencies to ~~programmer@scriptsolutions.com~~.
 
-[Pod::Html][6] by Tom Christiansen. Included with PerlDiver. This should be considered extremely beta. It will not break PerlDiver, but may alter the output of the module documentation. Please report inconsistencies to ~~programmer@scriptsolutions.com~~.
 # <a id="caveats"></a>Caveats
 
 #### <a id="item-Module-details-is-not-supported-on-Win32-systems"></a>Module details is not supported on Win32 systems.
