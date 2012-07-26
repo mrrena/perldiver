@@ -227,7 +227,7 @@ For support of this script please visit ~~http://scriptsolutions.com/support/~~
 
 # <a id="credits--acknowledgements"></a>Credits &amp; Acknowledgements
 
-Copyright 1997-2003, Creative Fundamentals, Inc. ~~http://creativefundamentals.com~~ dba ScriptSolutions ~~http://scriptsolutions.com~~)
+Copyright 1997-2006, Creative Fundamentals, Inc. ~~http://creativefundamentals.com~~ dba ScriptSolutions ~~http://scriptsolutions.com~~)
 
  [1]: http://web.archive.org/web/20100123121442/http://hoohoo.ncsa.illinois.edu/cgi/env.html
  [2]: http://search.cpan.org/search?dist=Module-Info

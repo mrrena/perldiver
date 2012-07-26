@@ -614,7 +614,7 @@ sub _page_footer{
             th( { -class => 'copyr' },
                 "$prog brought to you by " .
                 strike( { -href => 'http://scriptsolutions.com' }, $dev ) .
-                ' &copy; 1997-2003. ' .
+                ' &copy; 1997-2006. ' .
                 a( {-href => 'https://github.com/mrrena/perldiver' },
                     ' ' . ( localtime( time ) )[5] + 1900 .
                     ' source code' ) . '.'
