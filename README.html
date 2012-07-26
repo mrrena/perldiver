@@ -113,46 +113,46 @@
         <li><a href="#description">Description</a></li>
         <li><a href="#get_the_source">Get the Source</a></li>
         <li><a href="#installation">Installation</a>
-        <ul>
-            <li><a href="#files_in_this_distribution">
-                                        Files in this Distribution</a></li>
-        </ul>
+            <ul>
+                <li><a href="#files_in_this_distribution">
+                                    Files in this Distribution</a></li>
+            </ul>
         </li>
         <li><a href="#sections">Sections</a>
-        <ul>
-            <li><a href="#main">Main</a></li>
-            <li><a href="#environment_variables">Environment Variables</a></li>
-            <li><a href="#perl_default_values">Perl Default Values</a></li>
-            <li><a href="#perl_config_summary">Perl Config - Summary</a></li>
-            <li><a href="#perl_config_full">Perl Config - Full</a></li>
-            <li><a href="#installed_modules">Installed Modules</a>
-                <ul>
-                    <li><a href="#view_module_details_documentation">
-                    View Module Details &amp; Documentation</a>
-                        <ul>
-                            <li><a href="#module_details">
-                                                        Module Details</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+            <ul>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#environment_variables">Environment Variables</a></li>
+                <li><a href="#perl_default_values">Perl Default Values</a></li>
+                <li><a href="#perl_config_summary">Perl Config - Summary</a></li>
+                <li><a href="#perl_config_full">Perl Config - Full</a></li>
+                <li><a href="#installed_modules">Installed Modules</a>
+                    <ul>
+                        <li><a href="#view_module_details_documentation">
+                        View Module Details &amp; Documentation</a>
+                            <ul>
+                                <li><a href="#module_details">
+                                                    Module Details</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </li>
         <li>
-        <a href="#customizing_perl_diver">Customizing Perl Diver</a>
-        <ul>
-            <li><a href="#changing_appearance">Changing Appearance</a></li>
-            <li><a href="#changing_urls">Changing Urls</a>
-                <ul>
-                    <li><a href="#cpan_and_perl_documentation_links">CPAN and
-                                            Perl Documentation links</a></li>
-                    <li><a href="#rename_perldiver.pl">
-                                                Rename perldiver.pl</a></li>
-                </ul>
-            </li>
-            <li><a href="#default_settings">Default Settings</a></li>
-            <li><a href="#extending_perl_diver">Extending Perl Diver</a></li>
-        </ul>
+            <a href="#customizing_perl_diver">Customizing Perl Diver</a>
+            <ul>
+                <li><a href="#changing_appearance">Changing Appearance</a></li>
+                <li><a href="#changing_urls">Changing Urls</a>
+                    <ul>
+                        <li><a href="#cpan_and_perl_documentation_links">CPAN
+                            and Perl Documentation links</a></li>
+                        <li><a href="#rename_perldiver.pl">
+                            Rename perldiver.pl</a></li>
+                    </ul>
+                </li>
+                <li><a href="#default_settings">Default Settings</a></li>
+                <li><a href="#extending_perl_diver">Extending Perl Diver</a></li>
+            </ul>
         </li>
         <li><a href="#dependencies">Dependencies</a></li>
         <li><a href="#caveats">Caveats</a></li>
@@ -176,7 +176,7 @@
     </p>
     <h1 id="description">Description</h1>
     <p>Perl Diver is a CGI program written in Perl that will help you find out
-    what modules are installed on your server, server paths, perl configuration
+    what modules are installed on your server, server paths, Perl configuration
     settings, etc.</p>
     <h1 id="installation">Installation</h1>
     <p>If you have <tt>git</tt> access:</p>
@@ -194,7 +194,8 @@
     permissions turned on. You can do this by running the command <tt>chmod +x
     perldiver.pl</tt> from the command line. If you don't have command line
     access to your web server, then there will probably be an equivalent
-    function in your file transfer program (FTP).</p>
+    function in your file transfer program (FTP): you will need to set them to
+    <tt>755</tt>.</p>
     <h2 id="files_in_this_distribution">Files in this Distribution</h2>
     <ol>
         <li>
@@ -205,15 +206,16 @@
         <b id="perldiver.Econf">perldiver.conf</b><br>
         Configuration settings. Several sections in Perl Diver
         display information based on settings in this file. See
-        <a href="#customizing_perl_diver">Customizing Perl Diver</a> below for details.
+        <a href="#customizing_perl_diver">Customizing Perl Diver</a> below for
+        details.
         </li>
         <li>
         <b id="B.FUtils.Epm">B/Utils.pm</b><br>
-        A Perl module required by Module::Info.
+        A Perl module required by <tt>Module::Info</tt>.
         </li>
         <li>
         <b id="B.FModule.FInfo.Epm">B/Module/Info.pm</b><br>
-        A Perl module required by Module::Info.
+        A Perl module required by <tt>Module::Info</tt>.
         </li>
         <li>
         <b id="Module.FInfo.Epm">Module/Info.pm</b><br>
@@ -221,60 +223,68 @@
         </li>
         <li>
         <b id="Pod.FHtml2.Epm">Pod/Html2.pm</b><br>
-        A modified version of Pod::Html.
+        A modified version of <tt>Pod::Html</tt>.
         </li>
     </ol>
     <h1 id="sections">Sections</h1>
-    <p>Perl Diver comes with a base set of sections to which you can add your own
-    (covered in <a href="#customizing_perl_diver">Customizing Perl Diver</a>).
-    These sections are described below.</p>
+    <p>Perl Diver comes with a base set of sections to which you can add your
+    own (covered in
+    <a href="#customizing_perl_diver">Customizing Perl Diver</a>). These
+    sections are described below.</p>
     <h2 id="main">Main</h2>
-    <p>This section is the page that you see when you go to Perl Diver in your browser
-    without any parameters. It shows you the paths to Perl, sendmail, operating
-    system, etc. You can add or edit variables to this section (see
+    <p>This section is the page that you see when you go to Perl Diver in your
+    browser without any parameters. It shows you the paths to Perl,
+    <tt>sendmail</tt>, operating system, etc. You can add or edit variables to
+    this section (see
     <a href="#customizing_perl_diver">Customizing Perl Diver</a>).</p>
     <h2 id="environment_variables">Environment Variables</h2>
-    <p>In order to pass data about the information request from the server to the
-    script, the server uses command line arguments as well as environment variables.
-    These environment variables are set when the server executes the gateway program.</p>
+    <p>In order to pass data about the information request from the server to
+    the script, the server uses command line arguments as well as environment
+    variables. These environment variables are set when the server executes the
+    gateway program.</p>
     <p>&bull; Excerpted from
         <strike title="Obsolete link"><span>http://hoohoo.ncsa.uiuc.edu/cgi/env.html</span></strike>
-        <a href="http://web.archive.org/web/20100123121442/http://hoohoo.ncsa.illinois.edu/cgi/env.html" target="_blank">(Internet Archive Wayback Machine Link)</a>
+        <a href="http://web.archive.org/web/20100123121442/http://hoohoo.ncsa.illinois.edu/cgi/env.html" target="_blank">(Internet
+        Archive Wayback Machine Link)</a>
     </p>
     <p>This section displays all environment variables that are available for your
     server.</p>
     <h2 id="perl_default_values">Perl Default Values</h2>
-    <p>This section shows you some basic default values, such as a list of signal
-    handlers supported by your server, various separators, debugging support, etc.
-    You can add to this list by editing the Perl Defaults section of the
-    configuration file. See <a href="#customizing_perl_diver">Customizing Perl Diver</a> for details.</p>
+    <p>This section shows you some basic default values, such as a list of
+    signal handlers supported by your server, various separators, debugging
+    support, etc. You can add to this list by editing the Perl Defaults section
+    of the configuration file. See
+    <a href="#customizing_perl_diver">Customizing Perl Diver</a> for details.</p>
     <h2 id="perl_config_summary">Perl Config - Summary</h2>
-    <p>Displays a summary of the major perl configuration values.</p>
+    <p>Displays a summary of the major Perl configuration values.</p>
     <h2 id="perl_config_full">Perl Config - Full</h2>
-    <p>All the information that was available to the Configure program at Perl build
-    time (over 900 values). This section displays the entire perl configuration
-    information in the form of the original <tt>config.sh</tt> shell variable assignment
-    script.</p>
-    <p>All variables are linked to its description in <tt>Config.pm</tt>'s documentation
-    (using Perl Diver's <a href="#module_details">Module Details</a> function).</p>
+    <p>All the information that was available to the Configure program at Perl
+    build time (over 900 values). This section displays the entire Perl
+    configuration information in the form of the original <tt>config.sh</tt>
+    shell variable assignment script.</p>
+    <p>All variables are linked to its description in <tt>Config.pm</tt>'s
+    documentation (using Perl Diver's
+    <a href="#module_details">Module Details</a> function).</p>
     <h2 id="installed_modules">Installed Modules</h2>
-    <p>This section will list all modules that are included in the paths listed in
-    <tt>@INC</tt>. Each module is linked to a page with more information about the module
-    and its documentation (if any exist).</p>
+    <p>This section will list all modules that are included in the paths listed
+    in <tt>@INC</tt>. Each module is linked to a page with more information
+    about the module and its documentation (if any exist).</p>
     <h3 id="view_module_details_documentation">View Module Details &amp; Documentation</h3>
     <h4 id="module_details">Module Details</h4>
-    <p>These details are extracted using the Module::Info module
-    (found at <a href="http://search.cpan.org/search?dist=Module-Info" target="_blank">http://search.cpan.org/search</a>), which is included
-    in the Perl Diver distribution. The documentation in this section is derived
-    from the module.</p>
+    <p>These details are extracted using the <tt>Module::Info</tt> module
+    (found at
+    <a href="http://search.cpan.org/search?dist=Module-Info" target="_blank">http://search.cpan.org/search</a>),
+    which is included in the Perl Diver distribution. The documentation in this
+    section is derived from the module.</p>
     <ol>
         <li><b id="module_name">Name</b><br>
         Just the name of the module.
         </li>
         <li><b id="Version_Number.C_if_any.E">Version Number, if any.</b><br>
-        Divines the value of <tt>$VERSION</tt>. Module::Info uses the same method as
-        <a href="http://perldoc.perl.org/ExtUtils/MakeMaker.html" target="_blank">ExtUtils::MakeMaker</a> and all caveats therein apply.
-        </li>
+        Divines the value of <tt>$VERSION</tt>. <tt>Module::Info</tt> uses the
+        same method as
+        <tt><a href="http://perldoc.perl.org/ExtUtils/MakeMaker.html" target="_blank">ExtUtils::MakeMaker</a></tt>
+        and all caveats therein apply.</li>
         <li><b id="Include_Directory">Include Directory</b><br>
         Include directory in which this module was found.
         </li>
@@ -283,58 +293,68 @@
         </li>
         <li><b id="Is_Core">Is Core</b><br>
         Shows you if this module is included in the Perl distribution.
-        <p>Note that this checks perl's installation directories (see the
-        <a href="#perl_config_full">Perl Config - Full</a> output for the directory listed in the <tt>installarchlib</tt>
-        and <tt>installprivlib</tt> setting. It's possible that the module has been altered or
-        upgraded from CPAN since the original Perl installation.</p>
+        <div class="note">
+        <p>Note that this checks Perl's installation directories
+        (see the <a href="#perl_config_full">Perl Config - Full</a> output for
+        the directory listed in the <tt>installarchlib</tt> and
+        <tt>installprivlib</tt> setting. It's possible that the module has been
+        altered or upgraded from CPAN since the original Perl installation.</p>
         <p>A non-zero number states that it is a core module.</p>
+        </div>
         </li>
     </ol>
-    <p>The following details are extracted by compiling the module and examining the
-    optree code. The module will be compiled in a separate process so that it does
-    not disturb the current program.</p>
-    <p>These details will only show if you have perl 5.6.1 <i>(or greater)</i> installed
-    and requires the B::Utils module.</p>
-    <p>If you have perl 5.6.1 or higher and see all "None or Not Available" responses,
-    check your error log. Module::Info may not be finding a required module to
-    Run.</p>
-    <p class="note"><b>Notes</b>: Currently doesn't spot package changes inside subroutines. Also, the
-    following will currently not display if your server is running Win32.</p>
+    <p>The following details are extracted by compiling the module and examining
+    the <tt>optree</tt> code. The module will be compiled in a separate process
+    so that it does not disturb the current program.</p>
+    <p>These details will only show if you have Perl 5.6.1 <i>(or greater)</i>
+    installed and requires the <tt>B::Utils</tt> module.</p>
+    <p>If you have Perl 5.6.1 or higher and see all "None or Not Available"
+    responses, check your error log. <tt>Module::Info</tt> may not be finding a
+    required module to Run.</p>
+    <p class="note"><b>Notes</b>: Currently doesn't spot package changes inside
+    subroutines. Also, the following will currently not display if your server
+    is running Win32.</p>
     <ol>
         <li><b id="Packages_Inside">Packages Inside</b><br>
-        Looks for any explicit <tt>package</tt> declarations inside the module and returns a
-        list.  Useful for finding hidden classes and functionality (like Tie::StdHandle
-        inside Tie::Handle).
-        <p><b>Note</b>: Module::Info currently does not spot package changes inside subroutines.</p>
-        </li>
+        Looks for any explicit <tt>package</tt> declarations inside the module
+        and returns a list. Useful for finding hidden classes and functionality
+        (like <tt>Tie::StdHandle</tt> inside <tt>Tie::Handle</tt>).
+        <p class="note"><b>Note</b>: <tt>Module::Info</tt> currently does not
+        spot package changes inside subroutines.</p></li>
         <li><b id="Modules_Used">Modules Used</b><br>
-        Returns a list of all modules and files which may be <tt>use</tt>'d or <tt>require</tt>'d
-        by this module.
-        <p><b>Note</b>: These modules may be conditionally loaded, but Module::Info can't tell.
-        It cannot find modules which might be used inside an <tt>eval</tt>.</p>
-        </li>
+        Returns a list of all modules and files which may be <tt>use</tt>'d or
+        <tt>require</tt>'d by this module.
+        <p class="note"><b>Note</b>: These modules may be conditionally loaded,
+        but <tt>Module::Info</tt> can't tell. It cannot find modules which might
+        be used inside an <tt>eval</tt>.</p></li>
         <li><b id="Subroutines">Subroutines</b></li>
         <li><b id="Superclasses">Superclasses</b></li>
         <li><b id="Subroutines_Called">Subroutines Called</b></li>
         <li><b id="Dynamic_Method_Calls">Dynamic Method Calls</b></li>
     </ol>
-    <p>The remaining 2 options are to find the module and its documentation.  See
-    <a href="#changing_urls">Changing Urls</a> for instructions on how to change the urls to which
-    these links point.</p>
+    <p>The remaining 2 options are to find the module and its documentation. See
+    <a href="#changing_urls">Changing Urls</a> for instructions on how to change
+    the urls to which these links point.</p>
         <h1 id="customizing_perl_diver">Customizing Perl Diver</h1>
     <h2 id="changing_appearance">Changing Appearance</h2>
     <p>All colors, fonts, and font sizes are controlled by a style sheet in
-    <i>perldiver.conf</i>.  Make style sheet changes to the <tt>style</tt> variable.</p>
+    <i>perldiver.conf</i>. Make style sheet changes to the <tt>style</tt>
+    variable.</p>
     <h2 id="changing_urls">Changing Urls</h2>
-    <h3 id="cpan_and_perl_documentation_links">CPAN and Perl Documentation links</h3>
-    <p>By default, CPAN modules link to <a href="http://search.cpan.org/" target="_blank">http://search.cpan.org</a> and Perl
-    documentation links to <a href="http://perldoc.perl.org/" target="_blank">http://perldoc.perl.org</a>.  You can change this to your
-    favorite mirror by editing the <tt>perldoc_base_url</tt> and <tt>cpan_base_url</tt>
-    variables in the <b>Other</b> section of <i>perldiver.conf</i>.</p>
+    <h3 id="cpan_and_perl_documentation_links">CPAN and Perl Documentation
+    links</h3>
+    <p>By default, CPAN modules link to
+    <a href="http://search.cpan.org/" target="_blank">http://search.cpan.org</a>
+    and Perl documentation links to
+    <a href="http://perldoc.perl.org/" target="_blank">http://perldoc.perl.org</a>.
+    You can change this to your favorite mirror by editing the
+    <tt>perldoc_base_url</tt> and <tt>cpan_base_url</tt> variables in the
+    <b>Other</b> section of <i>perldiver.conf</i>.</p>
     <h3 id="rename_perldiver.pl">Rename perldiver.pl</h3>
-    <p>By default, Perl Diver is named perldiver.pl.  If you've changed this, be sure
-    to change the <tt>script_name</tt> variable in <i>perldiver.conf</i>'s <b>Other</b> section.
-    It's recommended to not change the name of <i>perldiver.conf</i>, but if you do, open
+    <p>By default, Perl Diver is named <i>perldiver.pl</i>. If you've changed
+    this, be sure to change the <tt>script_name</tt> variable in
+    <i>perldiver.conf</i>'s <b>Other</b> section. It's recommended to not
+    change the name of <i>perldiver.conf</i>, but if you do, open
     <i>perldiver.pl</i> and change the following line:</p>
     <pre class="code js"><code style="float: left"><ul>
 <li><span><span class="keyword">do</span> <span class="quote">'perldiver.conf'</span> <span class="keyword">or</span> die <span class="quote">"Can't load conf file $!"</span><span class="operator">;</span></span></li>
@@ -342,10 +362,11 @@
     <p>to reflect the new name/location of the configuration file.</p>
     <h2 id="default_settings">Default Settings</h2>
     <p>You can modify or add any piece of information that appears on the
-    <a href="#perl_default_values">Perl Default Values</a> page by editing the values in the "Perl Defaults"
-    section.  Add new data to the <tt>$defaults</tt> hashref using the format shown.</p>
+    <a href="#perl_default_values">Perl Default Values</a> page by editing the
+    values in the "Perl Defaults" section. Add new data to the
+    <tt>$defaults</tt> hashref using the format shown.</p>
     <h2 id="extending_perl_diver">Extending Perl Diver</h2>
-    <p>Extending Perl Diver is easy, but not for the faint at heart.  Simple
+    <p>Extending Perl Diver is easy, but not for the faint at heart.Simple
     follow the examples in <i>perldiver.conf</i> to build your own.</p>
     <h2 id="item_Add_command_line_output">Add command line output</h2>
     <pre class="code js"><code style="float: left"><ul>
@@ -359,40 +380,53 @@
     <h1 id="dependencies">Dependencies</h1>
     <p>PerlDiver requires the following modules to be installed.</p>
     <h4 id="item_CGI">CGI</h4>
-    Standard module included in perl distribution.
+    Standard module included in Perl distribution.
     <h4 id="item_File::A::AFind">File::Find</h4>
-    Standard module included in perl distribution.
+    Standard module included in Perl distribution.
     <h4 id="item_Config">Config</h4>
-    Module created when perl is installed.
+    Module created when Perl is installed.
     <h4 id="item_Pod::A::AHtml2">Pod::Html2</h4>
     Included with PerlDiver.
     <h4 id="item_Module::A::AInfo">Module::Info</h4>
     Included with PerlDiver.
     <h4 id="item_Pod2::A::AHtml">Pod2::Html</h4>
-    A modified version of <a href="http://perldoc.perl.org/Pod/Html.html" target="_blank">Pod::Html</a> by Tom Christiansen.
-    Included with PerlDiver.  This should be considered extremely beta. It will not
-    break PerlDiver, but may alter the output of the module documentation. Please
-    report inconsistencies to <strike title="Obsolete link"><span>programmer@scriptsolutions.com.</span></strike>
+    A modified version of
+    <a href="http://perldoc.perl.org/Pod/Html.html" target="_blank">Pod::Html</a>
+    by Tom Christiansen. Included with PerlDiver. This should be considered
+    extremely beta. It will not break PerlDiver, but may alter the output of
+    the module documentation. Please report inconsistencies to
+    <strike title="Obsolete link"><span>programmer@scriptsolutions.com</span></strike>
+    <a href="https://github.com/mrrena/perldiver/issues" target="_blank">https://github.com/mrrena/perldiver/issues</a>.
     <h1 id="caveats">Caveats</h1>
-    <h4 id="item_Module_details_is_not_supported_on_Win32_systems">Module details is not supported on Win32 systems.</h4>
+    <h4 id="item_Module_details_is_not_supported_on_Win32_systems">Module
+        details is not supported on Win32 systems.</h4>
     <h1 id="license">License</h1>
-    <p>This script is free software; you are free to redistribute it and/or modify it
-    under the same terms as Perl itself.</p>
+    <p>This script is free software; you are free to redistribute it and/or
+    modify it under the same terms as Perl itself.</p>
     <h1 id="changes">Changes</h1>
+    <div>2012 changes forward
+    <a href="https://github.com/mrrena/perldiver/commits/master" target="_blank">(github)
+        perldiver Commits</a></div>
     <div>2.032 - Added testing to module detail input. See
     <strike title="Obsolete link"><span>http://www.scriptsolutions.com/support/showflat.pl</span></strike>
-    <a href="http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443" target="_blank"><i>(Internet Archive Wayback Machine Link)</i></a>
-    for details. (<em>20050916</em>)</div>
+    <a href="http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443" target="_blank"><i>(Internet
+    Archive Wayback Machine Link)</i></a> for details. (<em>20050916</em>)</div>
     <div>2.031 - Told Pod2::Html to shut up already. (<em>20030420</em>)</div>
-    <div>2.03 - Removed most superfluous warnings in perldiver and Pod2::Html. (<em>20030419</em>)</div>
-    <div>2.02 - Modified Module::Info to remove warnings (<em>20030115</em>)</div>
-    <div>2.01 - Modified Pod::Html and included it as Pod2::Html (<em>20030103</em>)</div>
+    <div>2.03 - Removed most superfluous warnings in perldiver and Pod2::Html.
+        (<em>20030419</em>)</div>
+    <div>2.02 - Modified Module::Info to remove warnings
+        (<em>20030115</em>)</div>
+    <div>2.01 - Modified Pod::Html and included it as Pod2::Html
+        (<em>20030103</em>)</div>
     <div>2.00 - Overhaul from version 1.x (<em>20021216</em>)</div>
     <h1 id="support">Support</h1>
-    <p>For support of this script please visit <strike title="Obsolete link"><span>http://scriptsolutions.com/support/</span></strike></p>
+    <p>For support of this script please visit
+    <strike title="Obsolete link"><span>http://scriptsolutions.com/support/</span></strike>
+    <a href="https://github.com/mrrena/perldiver/issues" target="_blank">https://github.com/mrrena/perldiver/issues</a></p>
     <h1 id="credits_and_acknowledgements">Credits &amp; Acknowledgements</h1>
     <p>Copyright 1997-2006, Creative Fundamentals, Inc.
-    (<strike title="Obsolete link"><span>http://creativefundamentals.com</span></strike>) dba ScriptSolutions
+    (<strike title="Obsolete link"><span>http://creativefundamentals.com</span></strike>)
+    dba ScriptSolutions
     (<strike title="Obsolete link"><span>http://scriptsolutions.com</span></strike>)</p>
 </body>
 </html>
