@@ -304,8 +304,7 @@ sub module_detail {
 
     if ( $module =~ /^([-\:\w.]+)$/ ) {
         $module = $1;
-    }
-    else {
+    } else {
         return Tr( th ( "Bad module name: $module" ) );
     }
 
@@ -343,7 +342,7 @@ sub module_detail {
                             -href => $vars->{'cpan_base_url'} . pd_uri_escape( $module )
                             },
                             $module
-                         ),
+                         )
               },
         1010 => {
                 'name' => 'Documentation',
@@ -352,8 +351,8 @@ sub module_detail {
                             -href => "$vars->{'perldoc_base_url'}/$perldocmodpage"
                             },
                             $module
-                         ),
-              },
+                         )
+              }
     };
 
 
@@ -380,11 +379,9 @@ sub module_detail {
 
         if ( $^O =~ /mswin/i ){
             $response = 'This feature is currently not supported on Windows'
-        }
-        elsif( $@ ){
+        } elsif( $@ ){
             $response = "perl 5.6.1 is required to view this data."
-        }
-        else {
+        } else {
             $response = 'None or Not Available'
         }
 
@@ -406,7 +403,6 @@ sub module_detail {
         $mod_info->{ '150' }{ 'name' } = 'Dynamic Method Calls';
         $mod_info->{ '150' }{ 'val'  } = $mod->dynamic_method_calls ? pre( Dumper( $mod->dynamic_method_calls ) ) : $response;
 
-#    }
 
 
     my ( $c1, $c2 ) = ( 1, 1 ); # color incrementors
@@ -466,7 +462,7 @@ sub module_pod {
                             -href => $vars->{'cpan_base_url'} . pd_uri_escape( $module )
                             },
                             $module
-                         ),
+                         )
               },
         1010 => {
                 'name' => 'Documentation',
@@ -475,7 +471,7 @@ sub module_pod {
                             -href => "$vars->{'perldoc_base_url'}/$perldocmodpage"
                             },
                             $module
-                         ),
+                         )
               },
         1020 => {
                 'name' => 'Module Details',
@@ -483,8 +479,8 @@ sub module_pod {
                             -href => "$vars->{'script_name'}?action=2020&module=" . pd_uri_escape( $module )
                             },
                             $module
-                         ),
-              },
+                         )
+              }
     };
 
     my ( $c1, $c2 ) = ( 1, 1 ); # color incrementors
@@ -531,7 +527,7 @@ sub _section_header{
                     $actions->{ param( 'action' ) }{ 'name' }
                 )
             )
-        ) .
+        ),
         Tr(
             td(
                 { -class => 'c' },
