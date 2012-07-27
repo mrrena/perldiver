@@ -612,9 +612,10 @@ sub _page_footer{
     _table_output(
         Tr( { -class => 'hl' },
             th( { -class => 'copyr' },
-                "$prog brought to you by " .
-                strike( { -href => 'http://scriptsolutions.com' }, $dev ) .
-                ' &copy; 1997-2006. ' .
+                strike(
+                    "$prog brought to you by <span>$dev</span> &copy;
+                    1997-2006."
+                ),
                 a( {-href => 'https://github.com/mrrena/perldiver' },
                     ' ' . ( localtime( time ) )[5] + 1900 .
                     ' source code' ) . '.'
@@ -641,7 +642,7 @@ sub help_extend{
                 'https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip' },
                 'zip file'),
                  ' (updated 2012).</b>'
-            ),
+            )
         ),
         Tr(
             td(
