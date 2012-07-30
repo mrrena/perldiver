@@ -111,7 +111,6 @@
     <ul>
         <li><a href="#name">Name</a></li>
         <li><a href="#description">Description</a></li>
-        <li><a href="#get_the_source">Get the Source</a></li>
         <li><a href="#installation">Installation</a>
             <ul>
                 <li><a href="#files_in_this_distribution">
@@ -164,20 +163,25 @@
     </ul>
     <h1 id="name">Name</h1>
     <p>Perl Diver</p>
-    <h1 id="get_the_source">Get the Source</h1>
-    <p>Perl Diver source code available on GitHub @ <a
-        href="https://github.com/mrrena/perldiver"
-        target="_blank">https://github.com/mrrena/perldiver</a>. Blog post with
-        screenshot and how-tos on hiding Perl Diver from search engines using a
-        <tt>robots.txt</tt> file and password protecting your perldiver
-        directory using Apache's <tt>htpasswd</tt>:
-        <a href="http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html"
-        target="_blank">Perl Diver 2.33: Download and Installation</a>.
-    </p>
     <h1 id="description">Description</h1>
     <p>Perl Diver is a CGI program written in Perl that will help you find out
     what modules are installed on your server, server paths, Perl configuration
     settings, etc.</p>
+    <p>Perl Diver was originally offered by (since defunct)
+        <strike>ScriptSolutions.com</strike> (see
+        <a href="#credits_and_acknowledgements">Credits &amp; Acknowledgements</a>)
+        and is again available on GitHub @  <a
+        href="https://github.com/mrrena/perldiver">https://github.com/mrrena/perldiver</a>
+        per the terms of the original (and ongoing) <a href="#license">license</a>.
+    </p>
+    <p>A supporting blog post
+    <a
+    href="http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html">Perl
+    Diver 2.33: Download and Installation</a> provides
+        a screenshot and additional information on how to hide Perl Diver
+        from search engines using a <tt>robots.txt</tt> file and password
+        protecting your perldiver directory using Apache's <tt>htpasswd</tt>.
+    </p>
     <h1 id="installation">Installation</h1>
     <p>If you have <tt>git</tt> access:</p>
     <pre class="code"><code><span class="comment"># as ssh</span>
@@ -244,7 +248,7 @@
     gateway program.</p>
     <p>&bull; Excerpted from
         <strike title="Obsolete link"><span>http://hoohoo.ncsa.uiuc.edu/cgi/env.html</span></strike>
-        <a href="http://web.archive.org/web/20100123121442/http://hoohoo.ncsa.illinois.edu/cgi/env.html" target="_blank">(Internet
+        <a href="http://web.archive.org/web/20100123121442/http://hoohoo.ncsa.illinois.edu/cgi/env.html">(Internet
         Archive Wayback Machine Link)</a>
     </p>
     <p>This section displays all environment variables that are available for your
@@ -273,7 +277,7 @@
     <h4 id="module_details">Module Details</h4>
     <p>These details are extracted using the <tt>Module::Info</tt> module
     (found at
-    <a href="http://search.cpan.org/search?dist=Module-Info" target="_blank">http://search.cpan.org/search</a>),
+    <a href="http://search.cpan.org/search?dist=Module-Info">http://search.cpan.org/search</a>),
     which is included in the Perl Diver distribution. The documentation in this
     section is derived from the module.</p>
     <ol>
@@ -283,7 +287,7 @@
         <li><b id="Version_Number.C_if_any.E">Version Number, if any.</b><br>
         Divines the value of <tt>$VERSION</tt>. <tt>Module::Info</tt> uses the
         same method as
-        <tt><a href="http://perldoc.perl.org/ExtUtils/MakeMaker.html" target="_blank">ExtUtils::MakeMaker</a></tt>
+        <tt><a href="http://perldoc.perl.org/ExtUtils/MakeMaker.html">ExtUtils::MakeMaker</a></tt>
         and all caveats therein apply.</li>
         <li><b id="Include_Directory">Include Directory</b><br>
         Include directory in which this module was found.
@@ -344,9 +348,9 @@
     <h3 id="cpan_and_perl_documentation_links">CPAN and Perl Documentation
     links</h3>
     <p>By default, CPAN modules link to
-    <a href="http://search.cpan.org/" target="_blank">http://search.cpan.org</a>
+    <a href="http://search.cpan.org/">http://search.cpan.org</a>
     and Perl documentation links to
-    <a href="http://perldoc.perl.org/" target="_blank">http://perldoc.perl.org</a>.
+    <a href="http://perldoc.perl.org/">http://perldoc.perl.org</a>.
     You can change this to your favorite mirror by editing the
     <tt>perldoc_base_url</tt> and <tt>cpan_base_url</tt> variables in the
     <b>Other</b> section of <i>perldiver.conf</i>.</p>
@@ -391,25 +395,33 @@
     Included with PerlDiver.
     <h4 id="item_Pod2::A::AHtml">Pod2::Html</h4>
     A modified version of
-    <a href="http://perldoc.perl.org/Pod/Html.html" target="_blank">Pod::Html</a>
+    <a href="http://perldoc.perl.org/Pod/Html.html">Pod::Html</a>
     by Tom Christiansen. Included with PerlDiver. This should be considered
     extremely beta. It will not break PerlDiver, but may alter the output of
     the module documentation. Please report inconsistencies to
     <strike title="Obsolete link"><span>programmer@scriptsolutions.com</span></strike>
-    <a href="https://github.com/mrrena/perldiver/issues" target="_blank">https://github.com/mrrena/perldiver/issues</a>.
+    <a href="https://github.com/mrrena/perldiver/issues">https://github.com/mrrena/perldiver/issues</a>.
     <h1 id="caveats">Caveats</h1>
     <h4 id="item_Module_details_is_not_supported_on_Win32_systems">Module
         details is not supported on Win32 systems.</h4>
     <h1 id="license">License</h1>
     <p>This script is free software; you are free to redistribute it and/or
-    modify it under the same terms as Perl itself.</p>
+    modify it under the
+    <a href="http://dev.perl.org/licenses/">same terms as Perl itself</a>:
+        (<a href="http://dev.perl.org/licenses/artistic.html">Artistic
+        License</a>, <a
+        href="http://www.perlfoundation.org/artistic_license_2_0">Artistic
+        License 2</a>, and/or <a
+        href="http://dev.perl.org/licenses/gpl1.html">GPL, v.1</a> or <a
+        href="http://www.gnu.org/licenses/license-list.html#GNUGPL">any later</a>).
+    </p>
     <h1 id="changes">Changes</h1>
     <div>2012 changes forward
-    <a href="https://github.com/mrrena/perldiver/commits/master" target="_blank">(github)
+    <a href="https://github.com/mrrena/perldiver/commits/master">(github)
         perldiver Commits</a></div>
     <div>2.032 - Added testing to module detail input. See
     <strike title="Obsolete link"><span>http://www.scriptsolutions.com/support/showflat.pl</span></strike>
-    <a href="http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443" target="_blank"><i>(Internet
+    <a href="http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443"><i>(Internet
     Archive Wayback Machine Link)</i></a> for details. (<em>20050916</em>)</div>
     <div>2.031 - Told Pod2::Html to shut up already. (<em>20030420</em>)</div>
     <div>2.03 - Removed most superfluous warnings in perldiver and Pod2::Html.
@@ -422,7 +434,7 @@
     <h1 id="support">Support</h1>
     <p>For support of this script please visit
     <strike title="Obsolete link"><span>http://scriptsolutions.com/support/</span></strike>
-    <a href="https://github.com/mrrena/perldiver/issues" target="_blank">https://github.com/mrrena/perldiver/issues</a></p>
+    <a href="https://github.com/mrrena/perldiver/issues">https://github.com/mrrena/perldiver/issues</a></p>
     <h1 id="credits_and_acknowledgements">Credits &amp; Acknowledgements</h1>
     <p>Copyright 1997-2006, Creative Fundamentals, Inc.
     (<strike title="Obsolete link"><span>http://creativefundamentals.com</span></strike>)

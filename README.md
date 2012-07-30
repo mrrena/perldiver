@@ -3,7 +3,6 @@
 <ul>
     <li><a href="#name">Name</a></li>
     <li><a href="#description">Description</a></li>
-    <li><a href="#get-the-source">Get the Source</a></li>
     <li><a href="#installation">Installation</a>
         <ul>
             <li><a href="#files-in-this-distribution">Files in this Distribution</a></li>
@@ -56,9 +55,11 @@ Perl Diver
 
 Perl Diver is a CGI program written in Perl that will help you find out what modules are installed on your server, server paths, Perl configuration settings, etc.
 
-# <a id="get-the-source"></a>Get the Source
+Perl Diver was originally offered by (since defunct) ~~ScriptSolutions.~~~~com~~ (see [Credits &amp; Acknowledgements](#credits--acknowledgements)) and is again available on GitHub @ [https://github.com/mrrena/perldiver][8] per the terms of the original (and ongoing) [license](#license).
 
-Perl Diver source code available on GitHub @ [https://github.com/mrrena/perldiver][8]. Blog post with screenshot and how-tos on hiding Perl Diver from search engines using a *robots.txt* file and password protecting your perldiver directory using Apache's <tt>htpasswd</tt>: [Perl Diver 2.33: Download and Installation][9].
+A supporting blog post [Perl Diver 2.33: Download and Installation][9] provides a screenshot and additional information on how to hide Perl Diver from search engines using a <tt>robots.txt</tt> file and password protecting your perldiver directory using Apache's <tt>htpasswd</tt>.
+
+Perl Diver is a CGI program written in Perl that will help you find out what modules are installed on your server, server paths, Perl configuration settings, etc.
 
 # <a id="installation"></a>Installation
 
@@ -246,7 +247,7 @@ A modified version of [Pod::Html][6] by Tom Christiansen. Included with PerlDive
 
 # <a id="license"></a>License
 
-This script is free software; you are free to redistribute it and/or modify it under the same terms as Perl itself.
+This script is free software; you are free to redistribute it and/or modify it under the [same terms as Perl itself][12]: ([Artistic License][13], [Artistic License 2][14], and/or [GPL, v.1][15] or [any later][16]).
 
 # <a id="changes"></a>Changes
 
@@ -282,4 +283,10 @@ Copyright 1997-2006, Creative Fundamentals, Inc. ~~http~~~~://~~~~creativefundam
  [8]: https://github.com/mrrena/perldiver
  [9]: http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html
  [10]: https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip
- [11]: https://github.com/mrrena/perldiver/commits/master
+ [11]: https://github.com/mrrena/perldiver/commits/master/
+ [12]: http://dev.perl.org/licenses/
+ [13]: http://dev.perl.org/licenses/artistic.html
+ [14]: http://www.perlfoundation.org/artistic_license_2_0
+ [15]: http://dev.perl.org/licenses/gpl1.html
+ [16]: http://www.gnu.org/licenses/license-list.html#GNUGPL
+
