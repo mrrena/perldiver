@@ -59,8 +59,6 @@ Perl Diver was originally offered by (since defunct) ~~ScriptSolutions.~~~~com~~
 
 A supporting blog post [Perl Diver 2.33: Download and Installation][9] provides a screenshot and additional information on how to hide Perl Diver from search engines using a <tt>robots.txt</tt> file and password protecting your perldiver directory using Apache's <tt>htpasswd</tt>.
 
-Perl Diver is a CGI program written in Perl that will help you find out what modules are installed on your server, server paths, Perl configuration settings, etc.
-
 # <a id="installation"></a>Installation
 
 If you have <tt>git</tt> access:
