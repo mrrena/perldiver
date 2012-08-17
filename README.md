@@ -280,7 +280,7 @@ Copyright 1997-2006, Creative Fundamentals, Inc. ~~http~~~~://~~~~creativefundam
  [7]: http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443
  [8]: https://github.com/mrrena/perldiver
  [9]: http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html
- [10]: https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip
+ [10]: https://github.com/mrrena/perldiver/raw/master/perldiver.zip
  [11]: https://github.com/mrrena/perldiver/commits/master/
  [12]: http://dev.perl.org/licenses/
  [13]: http://dev.perl.org/licenses/artistic.html

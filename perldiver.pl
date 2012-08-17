@@ -635,7 +635,7 @@ sub help_extend{
                 'https://github.com/mrrena/perldiver') .
                 ' or as a ' .
                a({-href =>
-                'https://github.com/mrrena/perldiver/raw/master/perldiver2.33.zip' },
+                'https://github.com/mrrena/perldiver/raw/master/perldiver.zip' },
                 'zip file'),
                  ' (updated 2012).</b>'
             )
