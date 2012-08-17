@@ -251,7 +251,7 @@ This script is free software; you are free to redistribute it and/or modify it u
 
 2012 changes forward: [(github) perldiver Commits][11]
 
-2.032 - Added testing to module detail input. See ~~http~~~~://~~~~www~~~~.scriptsolutions.~~~~com/support/showflat.pl~~ [*(Internet Archive Wayback Machine Link)*][7] for details. (*20050916*)
+2.032 - Added testing to module detail input. See ~~http~~~~://~~~~www~~~~.scriptsolutions.~~~~com/support/showflat.pl~~ [(Internet Archive Wayback Machine Link)][7] for details. (*20050916*)
 
 2.031 - Told Pod2::Html to shut up already. (*20030420*)
 
