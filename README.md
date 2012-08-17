@@ -241,7 +241,7 @@ A modified version of [Pod::Html][6] by Tom Christiansen. Included with PerlDive
 
 # <a id="caveats"></a>Caveats
 
-#### <a id="item-Module-details-is-not-supported-on-Win32-systems"></a>Module details is not supported on Win32 systems.
+Module details is not supported on Win32 systems.
 
 # <a id="license"></a>License
 
@@ -265,7 +265,7 @@ This script is free software; you are free to redistribute it and/or modify it u
 
 # <a id="support"></a>Support
 
-For support of this script please visit ~~http~~~~://scriptsolutions.~~~~com/support/~~ https://github.com/mrrena/perldiver/issues
+For support of this script, please post your issue at [https://github.com/mrrena/perldiver/issues][17].
 
 # <a id="credits--acknowledgements"></a>Credits &amp; Acknowledgements
 
@@ -287,4 +287,5 @@ Copyright 1997-2006, Creative Fundamentals, Inc. ~~http~~~~://~~~~creativefundam
  [14]: http://www.perlfoundation.org/artistic_license_2_0
  [15]: http://dev.perl.org/licenses/gpl1.html
  [16]: http://www.gnu.org/licenses/license-list.html#GNUGPL
+ [17]: https://github.com/mrrena/perldiver/issues
 
