@@ -277,7 +277,7 @@ Copyright 1997-2006, Creative Fundamentals, Inc. ~~http~~~~://~~~~creativefundam
  [4]: http://search.cpan.org/
  [5]: http://perldoc.perl.org/
  [6]: http://perldoc.perl.org/Pod/Html.html
- [7]: http://web.archive.org/web/20061019231359/http://www.scriptsolutions.com/support/showflat.pl?Board=PDBugs&amp;Number=443
+ [7]: http://web.archive.org/web/20061019225512/http://www.scriptsolutions.com/support/showflat.pl?Cat=&Board=PDBugs&Number=443&page=0&view=collapsed&sb=5&o=0&fpart=
  [8]: https://github.com/mrrena/perldiver
  [9]: http://mrrena.blogspot.com/2012/05/perl-diver-233-download-and.html
  [10]: https://github.com/mrrena/perldiver/raw/master/perldiver.zip
@@ -288,4 +288,3 @@ Copyright 1997-2006, Creative Fundamentals, Inc. ~~http~~~~://~~~~creativefundam
  [15]: http://dev.perl.org/licenses/gpl1.html
  [16]: http://www.gnu.org/licenses/license-list.html#GNUGPL
  [17]: https://github.com/mrrena/perldiver/issues
-
